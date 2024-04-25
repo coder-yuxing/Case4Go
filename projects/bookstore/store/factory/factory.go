@@ -2,6 +2,7 @@ package factory
 
 import (
 	"fmt"
+	"log"
 	"sync"
 	"yuxing.code/bookstore/store"
 )
@@ -12,6 +13,7 @@ var (
 )
 
 func Register(name string, p store.Store) {
+	log.Printf("[factory]: register provider %q", name)
 	providersMu.Lock()
 	defer providersMu.Unlock()
 	if p == nil {

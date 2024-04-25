@@ -6,9 +6,11 @@ import (
 	"yuxing.code/bookstore/store/factory"
 )
 
+var MemStoreProviderName = "mem"
+
 // 利用 init函数 注册存储实现
 func init() {
-	factory.Register("men", &MemStore{
+	factory.Register(MemStoreProviderName, &MemStore{
 		books: make(map[string]*store.Book),
 	})
 }

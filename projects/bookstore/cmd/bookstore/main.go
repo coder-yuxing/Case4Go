@@ -7,13 +7,14 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+	"yuxing.code/bookstore/internal/store"
 	"yuxing.code/bookstore/server"
 	"yuxing.code/bookstore/store/factory"
 )
 
 func main() {
 	// 创建图书数据存储模块实例
-	s, err := factory.New("mem")
+	s, err := factory.New(store.MemStoreProviderName)
 	if err != nil {
 		panic(err)
 	}
