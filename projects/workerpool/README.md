@@ -15,4 +15,4 @@ Goroutine 池就是一种常见的解决方案。这个方案的核心思想是�
 2. pool中worker（goroutine）的管理
 3. task的提交与调度
 
-![1](https://github.com/coder-yuxing/Case4Go/blob/main/projects/workerpool/docs/img/api_list.png?raw=true)
+![1](https://github.com/coder-yuxing/Case4Go/blob/main/projects/workerpool/docs/img/1.jpg)
